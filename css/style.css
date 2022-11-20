@@ -1,0 +1,20 @@
+body {
+  background: url(https://i.picsum.photos/id/1042/3456/5184.jpg?hmac=5xr8Veg2D_kEQQO6rvGj_Yk8s_N4iq3-eZ9_KclSXNQ) #475d62;
+  color: white;
+}
+
+#depositoShow {
+  display: none;
+}
+
+#retiroShow {
+  display: none;
+}
+
+.mb {
+  margin-bottom: 50px;
+}
+
+.consulta, .deposito, .retiro, .sesion {
+  background: #1E2833;
+}

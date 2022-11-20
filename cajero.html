@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cajero Automático</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header >
+      <h3 id="bienvenida" class="display-1 text-center"></h3>
+      <hr>
+    </header>
+    <main>
+      <section class="container">
+        <div class="d-flex justify-content-around">
+          <button type="button" class="btn btn-secondary consulta" onclick="consultaSaldo()">Consulta tu Saldo</button>
+          <button type="button" class="btn btn-secondary deposito" onclick="depositoSaldo()">Deposita un monto</button>
+          <button type="button" class="btn btn-secondary retiro" onclick="retiroSaldo()">Retira tu dinero</button>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle">
+          
+          <div id="saldoShow" class="text-center display-5"></div>
+
+          <div id="depositoShow" class="text-center">
+            <span class="display-5">Ingresa el monto a depositar</span>
+            <input id="depoSaldo" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <button type="button" class="btn btn-lg btn-secondary" onclick="deposito()">Aceptar</button>
+            <div id="nuevosaldo" class="display-6"></div>
+          </div>
+
+          <div id="retiroShow" class="text-center">
+            <span class="display-5">Ingresa el monto a retirar</span>
+            <input id="retiSaldo" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
+            <button type="button" class="btn btn-lg btn-secondary" onclick="retiro()">Aceptar</button>
+            <div id="nuevosaldo2" class="display-6"></div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="btn btn-lg btn-secondary position-absolute top-100 start-50 translate-middle sesion" onclick="sesionoff()">Cerrar Sesión</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
