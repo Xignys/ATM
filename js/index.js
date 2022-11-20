@@ -23,13 +23,13 @@ let pass = document.getElementById("password");
 function validacion() {
   let ender = 0;
 
-  for (prop in cuentas) {
+  for (i in cuentas) {
     if (
-      user.value == cuentas[prop].nombre &&
-      pass.value == cuentas[prop].password
+      user.value == cuentas[i].nombre &&
+      pass.value == cuentas[i].password
     ) {
       nombre = user.value;
-      saldoinicial = cuentas[prop].saldo;
+      saldoinicial = cuentas[i].saldo;
       ender = 1;
     }
   }
